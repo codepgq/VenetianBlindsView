@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dwd-c6-7p0" customClass="VenetianBlindsView">
+                                <rect key="frame" x="109" y="88" width="157" height="321"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="321" id="Etr-mu-Kh6"/>
+                                    <constraint firstAttribute="width" constant="157" id="TYS-66-1ZM"/>
+                                </constraints>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="PUe-pb-VZr">
+                                <rect key="frame" x="18" y="439" width="339" height="31"/>
+                                <connections>
+                                    <action selector="angleSliderValueChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="Km2-YS-seG"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ozN-2S-guE">
+                                <rect key="frame" x="18" y="499" width="339" height="31"/>
+                                <connections>
+                                    <action selector="progressSliderValueChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="1G5-uN-QKy"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.89019607840000003" blue="0.01571802643" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="ozN-2S-guE" firstAttribute="top" secondItem="PUe-pb-VZr" secondAttribute="bottom" constant="30" id="0vH-c9-CvO"/>
+                            <constraint firstItem="PUe-pb-VZr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="7CF-9T-EdU"/>
+                            <constraint firstItem="ozN-2S-guE" firstAttribute="width" secondItem="PUe-pb-VZr" secondAttribute="width" id="8dx-vz-WN0"/>
+                            <constraint firstItem="PUe-pb-VZr" firstAttribute="top" secondItem="dwd-c6-7p0" secondAttribute="bottom" constant="30" id="HSU-ZZ-gOa"/>
+                            <constraint firstItem="PUe-pb-VZr" firstAttribute="centerX" secondItem="dwd-c6-7p0" secondAttribute="centerX" id="Hqm-zK-XCq"/>
+                            <constraint firstItem="dwd-c6-7p0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qq5-bJ-us1"/>
+                            <constraint firstItem="ozN-2S-guE" firstAttribute="centerX" secondItem="PUe-pb-VZr" secondAttribute="centerX" id="Si2-zt-GEg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PUe-pb-VZr" secondAttribute="trailing" constant="20" id="kFg-E1-1l1"/>
+                            <constraint firstItem="dwd-c6-7p0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="68" id="kcw-ea-7Um"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="ventianBlidnsView" destination="dwd-c6-7p0" id="Txd-QX-oK8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>
